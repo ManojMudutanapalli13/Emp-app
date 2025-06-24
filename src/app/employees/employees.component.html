@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Add Employee</h2>
+
+    <form class="form" (ngSubmit)="addOrUpdateEmployee()">
+        <input type="text" [(ngModel)]="employee.name" name="name"  placeholder="Enter name" required />
+        <input type="email" [(ngModel)]="employee.email" name="email"  placeholder="Enter email" required />
+        <button type="submit">
+            Add Employee
+        </button>
+
+    </form>
+
+    <hr />
+
+    <h2>Employee List</h2>
+    <table class="employee-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of employeeList; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ u.name }}</td>
+      <td>{{ u.email }}</td>
+      <td class="actions">
+        <button  class="icon-btn view" (click)="viewEmployee(i)" title="View">
+          🔍
+        </button>
+        <button class="icon-btn edit" (click)="editEmployee(i)" title="Edit">
+          ✏️
+        </button>
+        <button class="icon-btn delete" (click)="deleteEmployee(i)" title="Delete">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-pop-up *ngIf="showPopup" (close)="showPopup = false" (save)="onSave($event)"></app-pop-up>
+
+
+</div>
+

@@ -1,0 +1,31 @@
+<div class="overlay" (click)="onOverlayClick($event)">
+  <div class="popup" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="close.emit()">❌</button>
+
+    <div *ngIf="popupData">
+
+      <!-- View Mode -->
+      <div *ngIf="popupData.mode === 'view'">
+        <div>
+          <strong>Name:</strong> {{ popupData.name }}
+        </div>
+        <div>
+          <strong>Email:</strong> {{ popupData.email }}
+        </div>
+      </div>
+
+      <!-- Edit Mode -->
+      <div *ngIf="popupData.mode === 'edit'">
+        <div>
+          <label>Name:</label>
+          <input [(ngModel)]="popupData.name" />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input [(ngModel)]="popupData.email" />
+        </div>
+        <button (click)="saveData()">💾 Save</button>
+      </div>
+    </div>
+  </div>
+</div>

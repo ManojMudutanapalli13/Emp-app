@@ -1,0 +1,96 @@
+/* Overlay backdrop */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup card */
+.popup {
+  background-color: #ffffff;
+  padding: 57px 35px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above all content */
+  padding: 0;
+  line-height: 1;
+}
+
+
+/* Labels in view mode */
+.popup strong {
+  display: inline-block;
+  width: 80px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Value in view mode */
+.popup div:not(.popup-title):not(.popup-content) {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #222;
+}
+
+/* Labels and inputs in edit mode */
+.popup label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.popup input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.popup input:focus {
+  border-color: #007BFF;
+}
+
+/* Save button */
+.popup button {
+  margin-top: 18px;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
