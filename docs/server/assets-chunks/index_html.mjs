@@ -1,0 +1,12 @@
+export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
+  <meta charset="utf-8">
+  <title>ApiIntegration</title>
+  <base href="C:/Users/manoj.mudutanapalli/AppData/Local/Programs/Git/GitHUB02/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+<body><!--nghm-->
+  <app-root ng-version="19.2.14" ngh="1" ng-server-context="ssg"><router-outlet></router-outlet><app-page-not-found ngh="0"><p>page-not-found works!</p></app-page-not-found><!----></app-root>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-AXPKNIAH.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"c":{"0":[{"i":"c2302681248","r":1}]}}]}</script></body></html>`;
